@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Pharmacy.Data.Model;
 
-namespace Pharmacy.Data
+namespace Pharmacy.Data.Models
 {
     public class AppDbContext : DbContext
     {
@@ -16,5 +15,5 @@ namespace Pharmacy.Data
         }
 
     }
-    
+
 }

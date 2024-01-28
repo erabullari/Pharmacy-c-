@@ -1,15 +1,15 @@
 ﻿
 using Pharmacy.Data;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
-using Pharmacy.Data.Model;
 using Iservice;
+using Pharmacy.Data.Models;
 
 namespace Iservice
 {
-    public interface Iservice
+    public interface IMedicineService
     {
         Task<List<Medicine>> GetMedicineAsync();
-        Task<Medicine> GetyIdMedicine(int id);
+        Task<Medicine> GetMedicineByIdAsync(int id);
         Task PostMedicineAsync(PostMedicine medicine);
         Task<Medicine> UpdateMedicineAsync(int id, PutMedicine medicine);
         Task DeleteMedicineByIdAsync(int id);
