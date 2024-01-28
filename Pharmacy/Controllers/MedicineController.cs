@@ -15,7 +15,6 @@ namespace Pharmacy.Controllers
             _context = context;
         }
 
-        // GET: api/Medicine
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Medicine>>> GetMedicines()
         {
@@ -40,8 +39,8 @@ namespace Pharmacy.Controllers
             return medicine;
         }
 
-        // PUT: api/Medicine/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        
+       
         [HttpPut("{id}")]
         public async Task<IActionResult> PutMedicine(int id, Medicine medicine)
         {
@@ -71,8 +70,7 @@ namespace Pharmacy.Controllers
             return NoContent();
         }
 
-        // POST: api/Medicine
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        
         [HttpPost]
         public async Task<ActionResult<Medicine>> PostMedicine(Medicine medicine)
         {
@@ -82,7 +80,7 @@ namespace Pharmacy.Controllers
             return CreatedAtAction("GetMedicine", new { id = medicine.med_id }, medicine);
         }
 
-        // DELETE: api/Medicine/5
+       
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteMedicine(int id)
         {
